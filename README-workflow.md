@@ -65,3 +65,13 @@ De workflow gebruikt de standaard `GITHUB_TOKEN` met:
 - `pull-requests: write`
 
 Daarmee kan de action zelfstandig een update-PR aanmaken.
+
+## Node runtime voor actions
+
+De workflow zet:
+
+```yaml
+FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+```
+
+Dat dwingt JavaScript-based GitHub actions al naar Node 24, zodat de repo niet blijft hangen op de uitgefaseerde Node 20 runtime.
