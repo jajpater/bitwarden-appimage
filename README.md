@@ -59,3 +59,6 @@ bitwarden-appimage.packages.${pkgs.stdenv.hostPlatform.system}.default
 
 - [scripts/update-version.sh](/home/jajpater/Develop/mygithub/bitwarden-appimage/scripts/update-version.sh)
   Werkt version, URL en hash bij.
+
+- [README-workflow.md](/home/jajpater/Develop/mygithub/bitwarden-appimage/README-workflow.md)
+  Beschrijft hoe GitHub Actions de updateflow automatiseert.
