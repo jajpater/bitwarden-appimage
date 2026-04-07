@@ -2,11 +2,11 @@
 
 appimageTools.wrapType2 rec {
   pname = "bitwarden-desktop-appimage";
-  version = "2026.2.1";
+  version = "2026.3.1";
 
   src = fetchurl {
-    url = "https://github.com/bitwarden/clients/releases/download/desktop-v${version}/Bitwarden-${version}-x86_64.AppImage";
-    hash = "sha256-QBiMa1CbKRnXcO3kLi+xEfux+JeNiXllalzE8ToFZcA=";
+    url = "https://github.com/bitwarden/clients/releases/download/desktop-v2026.3.1/Bitwarden-2026.3.1-x86_64.AppImage";
+    hash = "sha256-VXJURlXivLyLWImLudscjGH1abAxOzUXkTUA8Tc2Mgw=";
   };
 
   extraPkgs = pkgs: [
