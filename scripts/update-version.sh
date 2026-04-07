@@ -58,10 +58,8 @@ fi
 sri_hash="$(nix hash convert --hash-algo sha256 --to sri "${digest_hex}")"
 
 perl -0pi -e 's/version = "[^"]+";/version = "'"${version}"'";/' "$package_file"
-perl -0pi -e 's#url = "https://github.com/bitwarden/clients/releases/download/desktop-v\$\{version\}/Bitwarden-\$\{version\}-x86_64\.AppImage";#url = "'"${download_url}"'";#' "$package_file"
 perl -0pi -e 's/hash = "sha256-[^"]+";/hash = "'"${sri_hash}"'";/' "$package_file"
 
 echo "Bijgewerkt: ${package_file}"
 echo "version=${version}"
-echo "url=${download_url}"
 echo "hash=${sri_hash}"
