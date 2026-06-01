@@ -8,9 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  id-token: write
 
 jobs:
   update:
@@ -21,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v15
+        uses: DeterminateSystems/determinate-nix-action@v3
 
       - name: Run updater
         run: ./scripts/update-version.sh
