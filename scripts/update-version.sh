@@ -57,8 +57,8 @@ fi
 
 sri_hash="$(nix hash convert --hash-algo sha256 --to sri "${digest_hex}")"
 
-perl -0pi -e 's/version = "[^"]+";/version = "'"${version}"'";/' "$package_file"
-perl -0pi -e 's/hash = "sha256-[^"]+";/hash = "'"${sri_hash}"'";/' "$package_file"
+perl -0pi -e 's#version = "[^"]+";#version = "'"${version}"'";#' "$package_file"
+perl -0pi -e 's#hash = "sha256-[^"]+";#hash = "'"${sri_hash}"'";#' "$package_file"
 
 echo "Bijgewerkt: ${package_file}"
 echo "version=${version}"
